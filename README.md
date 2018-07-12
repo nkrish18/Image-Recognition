@@ -28,14 +28,14 @@ Since neural networks require class labels to be in ‘One hot encoding’, the 
 
 ## Modelling and Classification
 
-###Convolutional Neural Network
+### Convolutional Neural Network
 
 #### Image Augmentation
 
 Though 60,000 training samples is a relatively large amount, deep learning methods generally require much more training data to perform at their best. Data augmentation is one way of increasing training samples by using the existing data by artificially creating images by various processing methods. The various augmentation methods implemented on this dataset are rotations, zoom, shears, width shifts and horizontal flips. This step is also necessary to increase the robustness of the model and control overfitting.
 
 
-### Architecture
+#### Architecture
 
 The ‘keras’ package with the tensorflow backend was used for building this convolutional network. A total of five convolution 2D layers are used here.
 
@@ -44,17 +44,18 @@ The first convolution layer consists of 32 filters, each of size (5x5) with a �
 The output from the final maxpooling layer is flattened and normalized again before going to the fully connected layers for classification. Two of these layers are used, each with 128 neurons along with dropout and normalization layers. The outputs are then finally sent to a dense softmax layer for converting them to probabilities for each class.
 
 
-### Optimizer
+#### Optimizer
 
 The ‘Adam’ optimizer which is an extension of SGD is used here. The initial learning rate is set to 0.01. A learning rate reducer is used as callback to reduce rate by a factor of 0.8 if there is no improvement after three continuous epochs, upto a minimum learning rate of 0.0001. The loss function used is ‘categorical crossentropy’ for 50 epochs.
 
 
 
-## Other Models
+### Other Models
 
 In order to appreciate the benefits and capability of deep learning methods, the random forest and SVM algorithms were also fitted on the same dataset inorder to compare performance.
 
 For Support Vector Machines, In order to deal with high dimensionality, Principal Component Analysis (PCA) is used.
+
 
 
 
