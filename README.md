@@ -10,6 +10,8 @@ The dataset comprises of Zalando's article images consisting of a set of 60,000 
 
 These images are converted to a more standard format with 32x32 pixels by adding padding.
 
+The dataset can be downloaded from [here](https://www.kaggle.com/zalando-research/fashionmnist) .
+
 
 ## Preprocessing
 
